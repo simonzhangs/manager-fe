@@ -1,6 +1,12 @@
 <script>
 export default {
   name: 'app',
+  mounted(){
+    this.$storage.setItem('age','30');
+    console.log('user=>',this.$storage.getItem('age'));
+    this.$storage.clearItem('age');
+    this.$storage.clearAll();
+  }
 }
 </script>
 
